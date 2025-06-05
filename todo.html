@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<Title>To-Do Application</Title>
+<body>
+    <div id="u">
+        <h1 >A To-Do List</h1>
+        <input id="input_item">
+        <button onclick="f()">Add</button>
+        
+    </div>
+    <div id="l">
+    <ul id="list">
+            <li>
+                Go to Gym
+            <button onclick="de(event)" >Done</button>
+            </li>
+        </ul>
+    </div>
+</body>
+
+<style>
+     #u{
+        background-color: rgb(59, 157, 123);
+        text-align: center;     
+        color: white;
+        margin: 0 auto;
+        padding-left: 10px;
+        width: fit-content;
+     }
+     #list{
+        text-align: center;
+        background-color: rgb(252, 252, 252);
+        color: brown;
+        
+     }
+     #l{
+        padding-left: 680px;
+        width: fit-content;
+     }
+     
+</style>
+<script>
+
+    var a=document.getElementById("list")
+    function f(){
+        
+        var c=document.getElementById("input_item")
+        var b=document.createElement("li")
+        
+        b.innerHTML=c.value +" "+"<button onclick=de(event)>Done</Delete>"
+        a.append(b)
+    }
+
+    function de(event){
+        event.target.parentElement.remove()
+    }
+</script>
